@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="App">
         <Switch>
-          <Route path="/counter">
+          <Route exact path="/">
             <Counter />
           </Route>
           <PrivateRoute path="/admin">{/* pages need authentication */}</PrivateRoute>
