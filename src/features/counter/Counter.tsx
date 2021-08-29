@@ -1,15 +1,17 @@
+import Button from '@material-ui/core/Button';
 import React, { useState } from 'react';
-
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import styles from './Counter.module.css';
 import {
   decrement,
   increment,
-  incrementByAmount,
-  incrementAsync,
+
+  incrementAsync, incrementByAmount,
+
   incrementIfOdd,
-  selectCount,
+  selectCount
 } from './counterSlice';
-import styles from './Counter.module.css';
+
 
 export function Counter() {
   const count = useAppSelector(selectCount);
@@ -20,6 +22,9 @@ export function Counter() {
 
   return (
     <div>
+      <Button variant="contained" color="primary">
+        Hello World
+      </Button>
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -56,10 +61,7 @@ export function Counter() {
         >
           Add Async
         </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
-        >
+        <button className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
       </div>
