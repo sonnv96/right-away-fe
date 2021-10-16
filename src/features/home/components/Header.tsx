@@ -167,8 +167,7 @@ export default function Header() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-         
-          
+          <img src="static/images/logo/full_logo.png" alt="logo" />
 
           {/* search  */}
           <div className={classes.search}>
